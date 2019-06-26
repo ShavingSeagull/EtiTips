@@ -3,25 +3,15 @@
      android:interpolator="@android:anim/bounce_interpolator"
      android:shareInterpolator="true">
     <translate
-            android:fromXDelta="2%"
+            android:fromXDelta="3%"
             android:fromYDelta="-100%p"
             android:toXDelta="0%"
             android:toYDelta="0%"
-            android:duration="1000"/>
+            android:duration="1100"/>
     <rotate
             android:pivotX="50%"
             android:pivotY="50%"
             android:fromDegrees="45"
             android:toDegrees="0"
-            android:duration="1500"/>
-    <set>
-        <translate
-                android:toYDelta="1%"
-                android:duration="300"/>
-    </set>
-    <set>
-        <translate
-                android:toYDelta="0%"
-                android:duration="300"/>
-    </set>
+            android:duration="1300"/>
 </set>
