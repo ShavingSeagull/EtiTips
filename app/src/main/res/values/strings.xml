@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">EtiTips</string>
-    <string name="main_button_text">Let\'s Get Started!</string>
+    <string name="main_button_text">To the Tips!</string>
     <string name="logo_desc">logo</string>
+    <string name="remove_ads">Remove Ads</string>
+    <string name="settings">Settings</string>
+    <string name="menu_title">Choose the Continent</string>
+    <string name="menu_americas">AMERICAS</string>
+    <string name="menu_europe">EUROPE</string>
+    <string name="menu_africa">AFRICA</string>
+    <string name="menu_asia_amp_oceania"><![CDATA[ASIA & OCEANIA]]></string>
+    <string name="menu_americas_desc">americas map</string>
+    <string name="menu_europe_desc">map europe</string>
+    <string name="menu_africa_desc">map africa</string>
+    <string name="menu_asia_oceania_desc">map asia</string>
 </resources>

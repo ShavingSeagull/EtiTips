@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/menuLayout"
+        android:background="@drawable/menu_gradient_1"
+        tools:context=".MenuActivity">
+
+        <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/map_americas"
+                android:id="@+id/mapAmericas"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/mapEurope" android:layout_marginEnd="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/menuTitle"
+                android:contentDescription="@string/menu_americas_desc"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/map_europe"
+                android:id="@+id/mapEurope"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toEndOf="@+id/mapAmericas" android:layout_marginStart="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/menuTitle" android:contentDescription="@string/menu_europe_desc"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/map_africa"
+                android:id="@+id/mapAfrica"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/mapAsiaOceania" android:layout_marginEnd="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/titleAmericas"
+                android:contentDescription="@string/menu_africa_desc"/>
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/map_asia_oceania"
+                android:id="@+id/mapAsiaOceania"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" app:layout_constraintStart_toEndOf="@+id/mapAfrica"
+                android:layout_marginStart="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/titleEurope" android:contentDescription="@string/menu_asia_oceania_desc"/>
+        <TextView
+                android:text="@string/menu_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menuTitle" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                android:textSize="30sp" android:textAlignment="center" android:textStyle="bold"
+                android:fontFamily="@font/amita" android:textColor="#000" android:shadowColor="#f2f2f2"
+                android:shadowDy="2" android:shadowDx="2" android:shadowRadius="5"/>
+        <TextView
+                android:text="@string/menu_americas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleAmericas" android:textSize="24sp"
+                android:textAlignment="center" android:layout_marginStart="16dp"
+                android:fontFamily="@font/amita"
+                android:textColor="#333333"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mapAmericas"
+                app:layout_constraintEnd_toStartOf="@+id/titleEurope"
+                android:layout_marginEnd="4dp"/>
+        <TextView
+                android:text="@string/menu_europe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleEurope" android:textSize="24sp" android:fontFamily="@font/amita"
+                android:textAlignment="center" android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="#333333"
+                app:layout_constraintTop_toBottomOf="@+id/mapEurope"
+                app:layout_constraintStart_toEndOf="@+id/titleAmericas" android:layout_marginStart="4dp"
+                android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/mapAsiaOceania"/>
+        <TextView
+                android:text="@string/menu_africa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleAfrica" android:textSize="24sp" android:fontFamily="@font/amita"
+                android:textAlignment="center" android:layout_marginStart="16dp"
+                android:textColor="#333333"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/titleAsiaOceania"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/mapAfrica" android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+                android:text="@string/menu_asia_amp_oceania"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleAsiaOceania" android:textSize="24sp" android:fontFamily="@font/amita"
+                android:textAlignment="center" android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="#333333"
+                app:layout_constraintStart_toEndOf="@+id/titleAfrica"
+                android:layout_marginStart="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/mapAsiaOceania" android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
