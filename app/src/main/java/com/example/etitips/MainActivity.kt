@@ -5,9 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.Button
-//import android.widget.ImageButton
-import android.widget.ImageView
+//import android.widget.Button
+//import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -17,8 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val logo = findViewById<ImageView>(R.id.logo)
-        val splashButton = findViewById<Button>(R.id.splashButton)
+//        val logo = findViewById<ImageView>(R.id.logo)
+//        val splashButton = findViewById<Button>(R.id.splashButton)
     }
 
     override fun onStart() {
