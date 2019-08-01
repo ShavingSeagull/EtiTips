@@ -1,8 +1,10 @@
 package com.example.etitips
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.TextView
@@ -48,5 +50,15 @@ class MenuActivity : AppCompatActivity() {
         titleEurope.startAnimation(textFade)
         titleAfrica.startAnimation(textFade)
         titleAsiaOceania.startAnimation(textFade)
+    }
+
+    fun americasList(view: View) {
+        val intent = Intent(this, AmericasListActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun europeList(view: View) {
+        val intent = Intent(this, EuropeListActivity::class.java)
+        startActivity(intent)
     }
 }
