@@ -7,7 +7,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class EuropeListActivity : AppCompatActivity() {
+class AfricaListActivity : AppCompatActivity() {
     private var mLayoutManager: RecyclerView.LayoutManager? = null
     private var mAdapter: RecyclerView.Adapter<CountryCardAdapter.ViewHolder>? = null
 
@@ -39,3 +39,4 @@ class EuropeListActivity : AppCompatActivity() {
         return true
     }
 }
+

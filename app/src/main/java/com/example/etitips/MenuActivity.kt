@@ -61,4 +61,14 @@ class MenuActivity : AppCompatActivity() {
         val intent = Intent(this, EuropeListActivity::class.java)
         startActivity(intent)
     }
+
+    fun africaList(view: View) {
+        val intent = Intent(this, AfricaListActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun asiaOceaniaList(view: View) {
+        val intent = Intent(this, AsiaOceaniaListActivity::class.java)
+        startActivity(intent)
+    }
 }

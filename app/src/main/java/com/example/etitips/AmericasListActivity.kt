@@ -13,18 +13,18 @@ class AmericasListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_americas_list)
+        setContentView(R.layout.recycler_list)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         toolbar.setTitleTextAppearance(this, R.style.AmitaTextAppearance)
 
         val americasList = ArrayList<CountryCardItem>()
-        americasList.add(CountryCardItem(R.drawable.canada_recycler, "Canada"))
-        americasList.add(CountryCardItem(R.drawable.mexico_recycler, "Mexico"))
-        americasList.add(CountryCardItem(R.drawable.united_states_recycler, "United States"))
+        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation"))
+        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation"))
+        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation"))
 
-        val mRecyclerView = findViewById<RecyclerView>(R.id.americasRecycler)
+        val mRecyclerView = findViewById<RecyclerView>(R.id.countriesRecycler)
         mRecyclerView.setHasFixedSize(true)
         mLayoutManager = LinearLayoutManager(this)
         mAdapter = CountryCardAdapter(americasList)

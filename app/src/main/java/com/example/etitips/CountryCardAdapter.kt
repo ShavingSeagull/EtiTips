@@ -21,7 +21,7 @@ class CountryCardAdapter(countryList: ArrayList<CountryCardItem>) : RecyclerView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.country_list, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.country_card, parent, false)
         return ViewHolder(v)
     }
 
