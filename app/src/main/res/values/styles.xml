@@ -13,4 +13,14 @@
         <item name="android:textSize">24sp</item>
     </style>
 
+    <style name="ContinentTab" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/mainScreenBg</item>
+        <item name="tabSelectedTextColor">@color/mainScreenBg</item>
+        <item name="tabTextAppearance">@style/ContinentTabTextAppearance</item>
+    </style>
+
+    <style name="ContinentTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">#A8A19E</item>
+    </style>
+
 </resources>
