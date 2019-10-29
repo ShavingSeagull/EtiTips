@@ -1,7 +1,7 @@
 package com.example.etitips
 
 import android.content.Context
-import android.content.DialogInterface
+//import android.content.DialogInterface
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
@@ -61,7 +61,9 @@ class MainActivity : AppCompatActivity() {
                     "and then select the country from the list. That's it!\n\nYou can find access to " +
                     "the app settings and the option to remove ads in the top right-hand corner.\n\n" +
                     "We hope you enjoy the service!")
-            .setPositiveButton("OK", DialogInterface.OnClickListener { dialog, position ->  dialog.dismiss()})
+            // Removed DialogInterface.OnClickListener as the second argument from .setPositiveButton.
+            // It appeared after the "OK" comma and before the lambda. The import is commented, too
+            .setPositiveButton("OK", { dialog, position ->  dialog.dismiss()})
             .create().show()
 
         val prefs: SharedPreferences = getSharedPreferences("prefs", Context.MODE_PRIVATE)
