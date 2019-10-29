@@ -1,0 +1,94 @@
+@font-face {
+    font-family: Amita;
+    src: url(file:///android_res/font/amita.ttf);
+}
+
+@font-face {
+    font-family: sourceSansPro;
+    src: url(file:///android_res/font/sourcesanspro.ttf);
+}
+
+body {
+    background-color: #1C99AF;
+}
+
+.container {
+    background-color: #ffffff;
+    padding-bottom: 10px;
+    box-shadow: 3px 3px 1px #000000;
+}
+
+.country-bio {
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.country-desc {
+    padding-top: 0;
+}
+
+.section-header {
+    padding: 10px;
+    background-color: #FFEB3B;
+    color: #1C99AF;
+    border-bottom: 2px solid #1C99AF;
+}
+
+p {
+    padding: 10px;
+    font-family: 'sourceSansPro', sans-serif;
+}
+
+li {
+    font-family: 'sourceSansPro', sans-serif;
+    margin-bottom: 10px;
+}
+
+.country-img {
+    display: block;
+    position: relative;
+    bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 2px solid #1C99AF;
+    border-right: 2px solid #1C99AF;
+    border-bottom: 2px solid #1C99AF;
+    box-shadow: 3px 3px 3px #000;
+}
+
+.paragraph-header {
+    font-family: 'Amita', cursive;
+    text-align: center;
+    padding: 10px 10px 0 10px;
+    margin-bottom: 0;
+}
+
+.line {
+    overflow: visible; /* For IE */
+    width: 40%;
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+.line:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+.good-list {
+    list-style-image: url("file:///android_res/drawable/check_icon.png");
+    list-style-type: square;
+}
+
+.bad-list {
+    list-style-image: url("file:///android_res/drawable/cross_icon.png");
+    list-style-type: square;
+}

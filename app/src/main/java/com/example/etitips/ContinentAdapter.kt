@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 
-class ContinentAdapter(context: Context, fm: FragmentManager?) : FragmentPagerAdapter(fm) {
+class ContinentAdapter(context: Context, fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
     private val mContext = context
 

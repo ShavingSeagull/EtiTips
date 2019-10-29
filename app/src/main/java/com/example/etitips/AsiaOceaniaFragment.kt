@@ -1,14 +1,17 @@
 package com.example.etitips
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.lang.ref.WeakReference
 
 /**
  * A simple [Fragment] subclass for the Asia and Oceania country list.
@@ -17,31 +20,58 @@ class AsiaOceaniaFragment : Fragment() {
 
     private var mLayoutManager: RecyclerView.LayoutManager? = null
     private var mAdapter: RecyclerView.Adapter<CountryCardAdapter.ViewHolder>? = null
+    private var mRootView: View? = null
+    private var mRecyclerView: RecyclerView? = null
+    private var mIntent: Intent? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.recycler_list, container, false)
+        if (mRootView == null) {
+            mRootView = inflater.inflate(R.layout.recycler_list, container, false)
+        }
 
-        val continentImage = rootView.findViewById<ImageView>(R.id.continentFlag)
+        val continentImage = mRootView!!.findViewById<ImageView>(R.id.continentFlag)
         continentImage.setImageResource(R.drawable.map_asia_oceania)
 
         val asiaOceaniaList = ArrayList<CountryCardItem>()
-        asiaOceaniaList.add(CountryCardItem(R.drawable.mexico_recycler, "Mexico (Asia)"))
-        asiaOceaniaList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation"))
-        asiaOceaniaList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation"))
+        asiaOceaniaList.add(CountryCardItem(R.drawable.mexico_recycler, "Mexico (Asia)", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
+        asiaOceaniaList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
+        asiaOceaniaList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
 
-        val mRecyclerView = rootView.findViewById<RecyclerView>(R.id.countriesRecycler)
-        mRecyclerView.setHasFixedSize(true)
-        mLayoutManager = LinearLayoutManager(this.activity)
-        mAdapter = CountryCardAdapter(asiaOceaniaList)
+        if (mRecyclerView == null) {
+            mRecyclerView = mRootView!!.findViewById(R.id.countriesRecycler)
+            mRecyclerView!!.setHasFixedSize(true)
+        }
+        if (mLayoutManager == null) {
+            mLayoutManager = LinearLayoutManager(this.activity)
+        }
+        if (mAdapter == null) {
+            mAdapter = CountryCardAdapter(
+                asiaOceaniaList,
+                { countryItem: CountryCardItem -> countryItemClicked(countryItem) })
+        }
+        mRecyclerView!!.layoutManager = mLayoutManager
+        mRecyclerView!!.adapter = mAdapter
 
-        mRecyclerView.layoutManager = mLayoutManager
-        mRecyclerView.adapter = mAdapter
-
-        return rootView
+        return mRootView
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        if (mRootView != null) mRootView = null
+        if (mRecyclerView != null) mRecyclerView = null
+        if (mLayoutManager != null) mLayoutManager = null
+        if (mAdapter != null) mAdapter = null
+        if (mIntent != null) mIntent = null
+    }
 
+    private fun countryItemClicked(countryItem: CountryCardItem) {
+        if (mIntent == null) {
+            mIntent = Intent(this.activity, CountryActivity::class.java)
+        }
+        mIntent!!.putExtra("FileUrls", countryItem.getFileUrls())
+        startActivity(mIntent)
+    }
 }

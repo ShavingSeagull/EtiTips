@@ -8,7 +8,7 @@
         android:orientation="vertical"
         android:id="@+id/menuLayout"
         android:background="@color/colorPrimary"
-        tools:context=".MenuActivity">
+        tools:context=".MainActivity">
 
         <include
                 android:id="@+id/toolbar"
