@@ -5,20 +5,30 @@ import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 import com.google.android.material.tabs.TabLayout
 
 class CountryActivity : AppCompatActivity() {
+
+    private lateinit var mAdView: AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_country)
 
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
+
         val urlBundle = intent.extras
         val fileUrls = urlBundle!!.get("FileUrls") as Array<String>
+        val countryName = urlBundle.get("CountryName") as String
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = countryName
 
         // Sets the toolbar font type and size (saved as a style)
         toolbar.setTitleTextAppearance(this, R.style.AmitaTextAppearance)

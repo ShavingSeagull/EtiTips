@@ -71,6 +71,7 @@ class AfricaFragment : Fragment() {
             mIntent = Intent(this.activity, CountryActivity::class.java)
         }
         mIntent!!.putExtra("FileUrls", countryItem.getFileUrls())
+        mIntent!!.putExtra("CountryName", countryItem.getText())
         startActivity(mIntent)
     }
 }

@@ -1,7 +1,6 @@
 package com.example.etitips
 
 import android.content.Context
-//import android.content.DialogInterface
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
@@ -10,12 +9,35 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.InterstitialAd
+import com.google.android.gms.ads.MobileAds
+
+const val AD_UNIT_ID = "ca-app-pub-3940256099942544/1033173712"
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var mInterstitialAd: InterstitialAd
+    private var mAdIteration: Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Initializes Google Ads
+        MobileAds.initialize(this)
+        // Sets up the interstitial ad OBJECT. Doesn't build it or load it here
+        mInterstitialAd = InterstitialAd(applicationContext).apply {
+            adUnitId = AD_UNIT_ID
+            adListener = (object : AdListener(){
+                override fun onAdClosed() {
+                    buildAd()
+                }
+            })
+        }
+        // Need to call buildAd once here, otherwise it will never have chance to be called by the app!
+        buildAd()
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -44,6 +66,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        showAd()
+    }
+
     // Displays the options menu in the top-right
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
@@ -70,5 +97,21 @@ class MainActivity : AppCompatActivity() {
         val editor: SharedPreferences.Editor = prefs.edit()
         editor.putBoolean("firstStart", false)
         editor.apply()
+    }
+
+    private fun buildAd() {
+        if (!mInterstitialAd.isLoading && !mInterstitialAd.isLoaded) {
+            val adRequest = AdRequest.Builder().build()
+            mInterstitialAd.loadAd(adRequest)
+        }
+    }
+
+    private fun showAd() {
+        if (mAdIteration % 4 == 0) {
+            if (mInterstitialAd.isLoaded) {
+                mInterstitialAd.show()
+            }
+        }
+        mAdIteration += 1
     }
 }

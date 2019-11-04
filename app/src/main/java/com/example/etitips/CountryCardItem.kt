@@ -1,7 +1,5 @@
 package com.example.etitips
 
-//import java.io.Serializable
-
 class CountryCardItem(imageResource: Int, text: String, fileUrls: Array<String>) {
     private var mImageResource = imageResource
     private var mText = text
