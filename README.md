@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="../blob/master/app/src/main/res/drawable/etitips_logo.png">
+	<img src="app/src/main/res/drawable/etitips_logo.png">
 </div>
 
 # EtiTips
