@@ -18,7 +18,7 @@ const val AD_UNIT_ID = "ca-app-pub-3940256099942544/1033173712"
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mInterstitialAd: InterstitialAd
+    private var mInterstitialAd: InterstitialAd? = null
     private var mAdIteration: Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,13 +28,15 @@ class MainActivity : AppCompatActivity() {
         // Initializes Google Ads
         MobileAds.initialize(this)
         // Sets up the interstitial ad OBJECT. Doesn't build it or load it here
-        mInterstitialAd = InterstitialAd(applicationContext).apply {
-            adUnitId = AD_UNIT_ID
-            adListener = (object : AdListener(){
-                override fun onAdClosed() {
-                    buildAd()
-                }
-            })
+        if (mInterstitialAd == null) {
+            mInterstitialAd = InterstitialAd(applicationContext).apply {
+                adUnitId = AD_UNIT_ID
+                adListener = (object : AdListener() {
+                    override fun onAdClosed() {
+                        buildAd()
+                    }
+                })
+            }
         }
         // Need to call buildAd once here, otherwise it will never have chance to be called by the app!
         buildAd()
@@ -71,6 +73,11 @@ class MainActivity : AppCompatActivity() {
         showAd()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        mInterstitialAd = null
+    }
+
     // Displays the options menu in the top-right
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater
@@ -89,7 +96,7 @@ class MainActivity : AppCompatActivity() {
                     "the app settings and the option to remove ads in the top right-hand corner.\n\n" +
                     "We hope you enjoy the service!")
             // Removed DialogInterface.OnClickListener as the second argument from .setPositiveButton.
-            // It appeared after the "OK" comma and before the lambda. The import is commented, too
+            // It appeared after the "OK" comma and before the lambda.
             .setPositiveButton("OK", { dialog, position ->  dialog.dismiss()})
             .create().show()
 
@@ -100,16 +107,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun buildAd() {
-        if (!mInterstitialAd.isLoading && !mInterstitialAd.isLoaded) {
+        if (mInterstitialAd!!.isLoading != true && mInterstitialAd!!.isLoaded != true) {
             val adRequest = AdRequest.Builder().build()
-            mInterstitialAd.loadAd(adRequest)
+            mInterstitialAd!!.loadAd(adRequest)
         }
     }
 
     private fun showAd() {
         if (mAdIteration % 4 == 0) {
-            if (mInterstitialAd.isLoaded) {
-                mInterstitialAd.show()
+            if (mInterstitialAd!!.isLoaded) {
+                mInterstitialAd!!.show()
             }
         }
         mAdIteration += 1

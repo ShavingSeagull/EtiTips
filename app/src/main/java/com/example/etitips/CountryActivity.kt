@@ -11,15 +11,17 @@ import com.google.android.material.tabs.TabLayout
 
 class CountryActivity : AppCompatActivity() {
 
-    private lateinit var mAdView: AdView
+    private var mAdView: AdView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_country)
 
-        mAdView = findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
+        if (mAdView == null) {
+            mAdView = findViewById(R.id.adView)
+            val adRequest = AdRequest.Builder().build()
+            mAdView!!.loadAd(adRequest)
+        }
 
         val urlBundle = intent.extras
         val fileUrls = urlBundle!!.get("FileUrls") as Array<String>
@@ -50,5 +52,10 @@ class CountryActivity : AppCompatActivity() {
         val inflater = menuInflater
         inflater.inflate(R.menu.main_menu, menu)
         return true
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mAdView = null
     }
 }
