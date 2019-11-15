@@ -63,6 +63,12 @@ li {
     margin-bottom: 0;
 }
 
+.about-paragraph-header {
+    font-family: 'sourceSansPro', sans-serif;
+    padding: 10px 10px 0 10px;
+    margin-bottom: 0;
+}
+
 .line {
     overflow: visible; /* For IE */
     width: 40%;

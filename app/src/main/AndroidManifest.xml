@@ -5,21 +5,27 @@
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
-            android:roundIcon="@mipmap/ic_launcher_round"
             android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity
+                android:name=".AboutActivity"
+                android:parentActivityName=".MainActivity"
+                android:screenOrientation="sensorPortrait"/>
+
         <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
                 android:value="ca-app-pub-8965962861746181~2584815446" />
+
         <activity
                 android:name=".CountryActivity"
-                android:screenOrientation="sensorPortrait"
-                android:parentActivityName=".MainActivity"></activity>
+                android:parentActivityName=".MainActivity"
+                android:screenOrientation="sensorPortrait" />
         <activity
                 android:name=".SplashActivity"
-                android:screenOrientation="sensorPortrait"
-                android:noHistory="true">
+                android:noHistory="true"
+                android:screenOrientation="sensorPortrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,8 +34,8 @@
         </activity>
         <activity
                 android:name=".MainActivity"
-                android:screenOrientation="sensorPortrait"
-                android:launchMode="singleTop"></activity>
+                android:launchMode="singleTop"
+                android:screenOrientation="sensorPortrait" />
     </application>
 
 </manifest>

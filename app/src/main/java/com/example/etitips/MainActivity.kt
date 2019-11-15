@@ -1,9 +1,11 @@
 package com.example.etitips
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -85,6 +87,17 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        return when (item.itemId) {
+            R.id.about -> {
+                showAboutPage(item)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
     // Sets the instructional modal to appear only on the first use of the app
     private fun showInstructionDialog() {
         AlertDialog.Builder(this)
@@ -120,5 +133,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
         mAdIteration += 1
+    }
+
+    private fun showAboutPage(menuitem: MenuItem) {
+        val intent = Intent(this, AboutActivity::class.java)
+        startActivity(intent)
     }
 }
