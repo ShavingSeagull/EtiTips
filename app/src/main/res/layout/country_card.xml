@@ -6,7 +6,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="6dp"
+        android:layout_marginBottom="10dp"
         app:cardBackgroundColor="@color/countryCard"
         app:cardElevation="5dp"
         app:cardCornerRadius="4dp">
