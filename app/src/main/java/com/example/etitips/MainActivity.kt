@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity() {
                     "Using EtiTips couldn't be simpler! Simply select the continent your desired " +
                     "country is in by swiping left or right (or by tapping the continent directly) " +
                     "and then select the country from the list. That's it!\n\nYou can find access to " +
-                    "the app settings and the option to remove ads in the top right-hand corner.\n\n" +
+                    "the about page and the useful travel-related affiliates page in the top right-hand corner.\n\n" +
                     "We hope you enjoy the service!")
             // Removed DialogInterface.OnClickListener as the second argument from .setPositiveButton.
             // It appeared after the "OK" comma and before the lambda.
