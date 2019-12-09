@@ -6,7 +6,5 @@
     <color name="mainScreenBg">#FFEB3B</color>
     <color name="colorLogo">#1C99AF</color>
     <color name="menuScreenBg">#606369</color>
-    <color name="countryCard">#f6e0b5</color>
-    <!--f6e0b5
-    ffdc73-->
+    <color name="countryCard">#f0e2a8</color>
 </resources>
