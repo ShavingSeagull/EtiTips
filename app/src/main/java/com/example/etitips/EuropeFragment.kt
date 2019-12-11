@@ -34,7 +34,7 @@ class EuropeFragment : Fragment() {
         continentImage.setImageResource(R.drawable.map_europe)
 
         val europeList = ArrayList<CountryCardItem>()
-        europeList.add(CountryCardItem(R.drawable.germany_recycler, "Germany", arrayOf("file:///android_asset/germany_social.html", "file:///android_asset/germany_food_drink.html", "file:///android_asset/germany_culture.html", "file:///android_asset/mexico.html")))
+        europeList.add(CountryCardItem(R.drawable.germany_recycler, "Germany", arrayOf("file:///android_asset/germany_social.html", "file:///android_asset/germany_food_drink.html", "file:///android_asset/germany_culture.html", "file:///android_asset/germany_transport.html")))
         europeList.add(CountryCardItem(R.drawable.netherlands_recycler, "Netherlands", arrayOf("file:///android_asset/netherlands_social.html", "file:///android_asset/netherlands_food_drink.html", "file:///android_asset/netherlands_culture.html", "file:///android_asset/netherlands_transport.html")))
         europeList.add(CountryCardItem(R.drawable.united_kingdom_recycler, "United Kingdom", arrayOf("file:///android_asset/united_kingdom_social.html", "file:///android_asset/united_kingdom_food_drink.html", "file:///android_asset/united_kingdom_culture.html", "file:///android_asset/united_kingdom_transport.html")))
 
