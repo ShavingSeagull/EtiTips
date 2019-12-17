@@ -34,20 +34,7 @@ class AmericasFragment : Fragment() {
         continentImage.setImageResource(R.drawable.map_americas)
 
         val americasList = ArrayList<CountryCardItem>()
-        americasList.add(CountryCardItem(R.drawable.united_states_recycler, "United States", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.canada_recycler, "Canada", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        americasList.add(CountryCardItem(R.drawable.mexico_recycler, "Mexico", arrayOf("file:///android_asset/mexico.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
+        americasList.add(CountryCardItem(R.drawable.united_states_recycler, "United States", arrayOf("file:///android_asset/countries/united_states/united_states_social.html", "file:///android_asset/countries/united_states/united_states_food_drink.html", "file:///android_asset/mexico.html", "file:///android_asset/mexico.html")))
 
         if (mRecyclerView == null) {
             mRecyclerView = mRootView!!.findViewById(R.id.countriesRecycler)
