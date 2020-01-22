@@ -47,13 +47,6 @@ class CountryActivity : AppCompatActivity() {
         tabLayout.setupWithViewPager(viewPager)
     }
 
-    // Displays the options menu in the top-right
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater = menuInflater
-        inflater.inflate(R.menu.main_menu, menu)
-        return true
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         mAdView = null

@@ -34,9 +34,10 @@ class AfricaFragment : Fragment() {
         continentImage.setImageResource(R.drawable.map_africa)
 
         val africaList = ArrayList<CountryCardItem>()
-        africaList.add(CountryCardItem(R.drawable.united_states_recycler, "USA (Africa)", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        africaList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        africaList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
+        africaList.add(CountryCardItem(R.drawable.fuerteventura_recycler, "Fuerteventura (Spain)", arrayOf("file:///android_asset/countries/spain/spain_social.html", "file:///android_asset/countries/spain/spain_food_drink.html", "file:///android_asset/countries/spain/spain_culture.html", "file:///android_asset/countries/spain/spain_transport.html")))
+        africaList.add(CountryCardItem(R.drawable.gran_canaria_recycler, "Gran Canaria (Spain)", arrayOf("file:///android_asset/countries/spain/spain_social.html", "file:///android_asset/countries/spain/spain_food_drink.html", "file:///android_asset/countries/spain/spain_culture.html", "file:///android_asset/countries/spain/spain_transport.html")))
+        africaList.add(CountryCardItem(R.drawable.lanzarote_recycler, "Lanzarote (Spain)", arrayOf("file:///android_asset/countries/spain/spain_social.html", "file:///android_asset/countries/spain/spain_food_drink.html", "file:///android_asset/countries/spain/spain_culture.html", "file:///android_asset/countries/spain/spain_transport.html")))
+        africaList.add(CountryCardItem(R.drawable.tenerife_recycler, "Tenerife (Spain)", arrayOf("file:///android_asset/countries/spain/spain_social.html", "file:///android_asset/countries/spain/spain_food_drink.html", "file:///android_asset/countries/spain/spain_culture.html", "file:///android_asset/countries/spain/spain_transport.html")))
 
         if (mRecyclerView == null) {
             mRecyclerView = mRootView!!.findViewById(R.id.countriesRecycler)
