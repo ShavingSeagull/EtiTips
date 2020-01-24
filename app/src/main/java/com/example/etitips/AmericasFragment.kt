@@ -34,6 +34,7 @@ class AmericasFragment : Fragment() {
         continentImage.setImageResource(R.drawable.map_americas)
 
         val americasList = ArrayList<CountryCardItem>()
+        americasList.add(CountryCardItem(R.drawable.canada_recycler, "Canada", arrayOf("file:///android_asset/countries/canada/canada_social.html", "file:///android_asset/countries/canada/canada_food_drink.html", "file:///android_asset/countries/canada/canada_culture.html", "file:///android_asset/countries/canada/canada_transport.html")))
         americasList.add(CountryCardItem(R.drawable.united_states_recycler, "United States", arrayOf("file:///android_asset/countries/united_states/united_states_social.html", "file:///android_asset/countries/united_states/united_states_food_drink.html", "file:///android_asset/countries/united_states/united_states_culture.html", "file:///android_asset/countries/united_states/united_states_transport.html")))
 
         if (mRecyclerView == null) {
