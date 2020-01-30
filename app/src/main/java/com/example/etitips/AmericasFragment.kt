@@ -35,6 +35,7 @@ class AmericasFragment : Fragment() {
 
         val americasList = ArrayList<CountryCardItem>()
         americasList.add(CountryCardItem(R.drawable.canada_recycler, "Canada", arrayOf("file:///android_asset/countries/canada/canada_social.html", "file:///android_asset/countries/canada/canada_food_drink.html", "file:///android_asset/countries/canada/canada_culture.html", "file:///android_asset/countries/canada/canada_transport.html")))
+        americasList.add(CountryCardItem(R.drawable.jamaica_recycler, "Jamaica", arrayOf("file:///android_asset/countries/jamaica/jamaica_social.html", "file:///android_asset/countries/jamaica/jamaica_food_drink.html", "file:///android_asset/countries/jamaica/jamaica_culture.html", "file:///android_asset/countries/jamaica/jamaica_transport.html")))
         americasList.add(CountryCardItem(R.drawable.mexico_recycler, "Mexico", arrayOf("file:///android_asset/countries/mexico/mexico_social.html", "file:///android_asset/countries/mexico/mexico_food_drink.html", "file:///android_asset/countries/mexico/mexico_culture.html", "file:///android_asset/countries/mexico/mexico_transport.html")))
         americasList.add(CountryCardItem(R.drawable.united_states_recycler, "United States", arrayOf("file:///android_asset/countries/united_states/united_states_social.html", "file:///android_asset/countries/united_states/united_states_food_drink.html", "file:///android_asset/countries/united_states/united_states_culture.html", "file:///android_asset/countries/united_states/united_states_transport.html")))
 
