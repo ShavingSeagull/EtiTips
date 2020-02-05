@@ -34,6 +34,7 @@ class AfricaFragment : Fragment() {
         continentImage.setImageResource(R.drawable.map_africa)
 
         val africaList = ArrayList<CountryCardItem>()
+        africaList.add(CountryCardItem(R.drawable.egypt_recycler, "Egypt", arrayOf("file:///android_asset/countries/egypt/egypt_social.html", "file:///android_asset/countries/egypt/egypt_food_drink.html", "file:///android_asset/countries/egypt/egypt_culture.html", "file:///android_asset/countries/egypt/egypt_transport.html")))
         africaList.add(CountryCardItem(R.drawable.fuerteventura_recycler, "Fuerteventura (Spain)", arrayOf("file:///android_asset/countries/spain/spain_social.html", "file:///android_asset/countries/spain/spain_food_drink.html", "file:///android_asset/countries/spain/spain_culture.html", "file:///android_asset/countries/spain/spain_transport.html")))
         africaList.add(CountryCardItem(R.drawable.gran_canaria_recycler, "Gran Canaria (Spain)", arrayOf("file:///android_asset/countries/spain/spain_social.html", "file:///android_asset/countries/spain/spain_food_drink.html", "file:///android_asset/countries/spain/spain_culture.html", "file:///android_asset/countries/spain/spain_transport.html")))
         africaList.add(CountryCardItem(R.drawable.lanzarote_recycler, "Lanzarote (Spain)", arrayOf("file:///android_asset/countries/spain/spain_social.html", "file:///android_asset/countries/spain/spain_food_drink.html", "file:///android_asset/countries/spain/spain_culture.html", "file:///android_asset/countries/spain/spain_transport.html")))
