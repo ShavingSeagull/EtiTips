@@ -40,6 +40,7 @@ class AfricaFragment : Fragment() {
         africaList.add(CountryCardItem(R.drawable.lanzarote_recycler, "Lanzarote (Spain)", arrayOf("file:///android_asset/countries/spain/spain_social.html", "file:///android_asset/countries/spain/spain_food_drink.html", "file:///android_asset/countries/spain/spain_culture.html", "file:///android_asset/countries/spain/spain_transport.html")))
         africaList.add(CountryCardItem(R.drawable.morocco_recycler, "Morocco", arrayOf("file:///android_asset/countries/morocco/morocco_social.html", "file:///android_asset/countries/morocco/morocco_food_drink.html", "file:///android_asset/countries/morocco/morocco_culture.html", "file:///android_asset/countries/morocco/morocco_transport.html")))
         africaList.add(CountryCardItem(R.drawable.tenerife_recycler, "Tenerife (Spain)", arrayOf("file:///android_asset/countries/spain/spain_social.html", "file:///android_asset/countries/spain/spain_food_drink.html", "file:///android_asset/countries/spain/spain_culture.html", "file:///android_asset/countries/spain/spain_transport.html")))
+        africaList.add(CountryCardItem(R.drawable.tunisia_recycler, "Tunisia", arrayOf("file:///android_asset/countries/tunisia/tunisia_social.html", "file:///android_asset/countries/tunisia/tunisia_food_drink.html", "file:///android_asset/countries/tunisia/tunisia_culture.html", "file:///android_asset/countries/tunisia/tunisia_transport.html")))
 
         if (mRecyclerView == null) {
             mRecyclerView = mRootView!!.findViewById(R.id.countriesRecycler)
