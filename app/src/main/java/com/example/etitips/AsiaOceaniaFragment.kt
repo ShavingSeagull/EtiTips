@@ -36,9 +36,7 @@ class AsiaOceaniaFragment : Fragment() {
         continentImage.setImageResource(R.drawable.map_asia_oceania)
 
         val asiaOceaniaList = ArrayList<CountryCardItem>()
-        asiaOceaniaList.add(CountryCardItem(R.drawable.mexico_recycler, "Mexico (Asia)", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        asiaOceaniaList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
-        asiaOceaniaList.add(CountryCardItem(R.drawable.dummy_recycler, "Dummy Nation", arrayOf("file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html", "file:///android_asset/united_kingdom.html", "file:///android_asset/mexico.html")))
+        asiaOceaniaList.add(CountryCardItem(R.drawable.japan_recycler, "Japan", arrayOf("file:///android_asset/countries/japan/japan_social.html", "file:///android_asset/countries/japan/japan_food_drink.html", "file:///android_asset/countries/japan/japan_culture.html", "file:///android_asset/countries/japan/japan_transport.html")))
 
         if (mRecyclerView == null) {
             mRecyclerView = mRootView!!.findViewById(R.id.countriesRecycler)
