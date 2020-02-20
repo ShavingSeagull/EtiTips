@@ -36,6 +36,7 @@ class AsiaOceaniaFragment : Fragment() {
         continentImage.setImageResource(R.drawable.map_asia_oceania)
 
         val asiaOceaniaList = ArrayList<CountryCardItem>()
+        asiaOceaniaList.add(CountryCardItem(R.drawable.australia_recycler, "Australia", arrayOf("file:///android_asset/countries/australia/australia_social.html", "file:///android_asset/countries/australia/australia_food_drink.html", "file:///android_asset/countries/australia/australia_culture.html", "file:///android_asset/countries/australia/australia_transport.html")))
         asiaOceaniaList.add(CountryCardItem(R.drawable.japan_recycler, "Japan", arrayOf("file:///android_asset/countries/japan/japan_social.html", "file:///android_asset/countries/japan/japan_food_drink.html", "file:///android_asset/countries/japan/japan_culture.html", "file:///android_asset/countries/japan/japan_transport.html")))
 
         if (mRecyclerView == null) {
