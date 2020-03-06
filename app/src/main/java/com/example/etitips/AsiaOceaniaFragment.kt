@@ -37,6 +37,7 @@ class AsiaOceaniaFragment : Fragment() {
 
         val asiaOceaniaList = ArrayList<CountryCardItem>()
         asiaOceaniaList.add(CountryCardItem(R.drawable.australia_recycler, "Australia", arrayOf("file:///android_asset/countries/australia/australia_social.html", "file:///android_asset/countries/australia/australia_food_drink.html", "file:///android_asset/countries/australia/australia_culture.html", "file:///android_asset/countries/australia/australia_transport.html")))
+        asiaOceaniaList.add(CountryCardItem(R.drawable.china_recycler, "China", arrayOf("file:///android_asset/countries/china/china_social.html", "file:///android_asset/countries/china/china_food_drink.html", "file:///android_asset/countries/china/china_culture.html", "file:///android_asset/countries/china/china_transport.html")))
         asiaOceaniaList.add(CountryCardItem(R.drawable.japan_recycler, "Japan", arrayOf("file:///android_asset/countries/japan/japan_social.html", "file:///android_asset/countries/japan/japan_food_drink.html", "file:///android_asset/countries/japan/japan_culture.html", "file:///android_asset/countries/japan/japan_transport.html")))
         asiaOceaniaList.add(CountryCardItem(R.drawable.new_zealand_recycler, "New Zealand", arrayOf("file:///android_asset/countries/new_zealand/new_zealand_social.html", "file:///android_asset/countries/new_zealand/new_zealand_food_drink.html", "file:///android_asset/countries/new_zealand/new_zealand_culture.html", "file:///android_asset/countries/new_zealand/new_zealand_transport.html")))
 
